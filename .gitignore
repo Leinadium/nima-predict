@@ -1,9 +1,9 @@
 venv/
-**/__pycache__
+**/__pycache__/
 *.pyc
 .idea
 
-data/*.csv
-data/*.h
-data/vec.pkl
+/data/*.csv
+/data/*.h
+/data/*.pkl
 
