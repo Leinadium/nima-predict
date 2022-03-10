@@ -1,0 +1,9 @@
+keras
+sklearn
+pandas
+numpy
+tensorflow
+colorama
+termcolor
+scikit-learn
+joblib
