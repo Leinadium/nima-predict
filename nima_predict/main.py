@@ -3,9 +3,6 @@ from os import path
 from termcolor import colored
 import colorama
 
-from server import configurar, server_loop
-from rede_neural import carregar_modelo, carregar_vectorizer
-
 colorama.init()
 
 # argumentos
@@ -29,6 +26,10 @@ if not path.isfile(path_modelo):
 if not path.isfile(path_vec):
     print(colored("Arquivo não encontrado: ", 'red'), path_vec)
     exit(-1)
+
+from server import configurar, server_loop
+from rede_neural import carregar_modelo, carregar_vectorizer
+
 
 # configurando os modelos
 try:
