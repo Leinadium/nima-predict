@@ -7,3 +7,4 @@ colorama
 termcolor
 scikit-learn
 joblib
+nltk
