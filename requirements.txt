@@ -8,3 +8,5 @@ termcolor
 scikit-learn
 joblib
 nltk
+agraph-python
+franz

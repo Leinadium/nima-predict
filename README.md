@@ -73,7 +73,7 @@ o pré tratamento das palavras)
 Para rodar o servidor, execute o arquivo `main.py` em `nima_predict`, que utiliza três argumentos:
 
 ```shell
-$ python nima_predict/main.py  PATH/PARA/MODELO  PATH/PARA/VETORIZADOR  PORTA_SERVIDOR
+$ python nima_predict/main_tempo_real.py  PATH/PARA/MODELO  PATH/PARA/VETORIZADOR  PORTA_SERVIDOR
 ```
 
 O servidor espera receber um *JSON* em alguma das seguintes três formas:
@@ -101,7 +101,7 @@ Para testar, execute o script `exemplo/main.py`, que envia o conteudo de `/exemp
 
 ```shell
 $ cd exemplo
-$ python main.py
+$ python main_tempo_real.py
 ```
 
 Ou utilize `netcat` (em linux):

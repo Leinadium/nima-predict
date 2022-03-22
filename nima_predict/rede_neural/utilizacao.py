@@ -46,7 +46,7 @@ def _converte_dicionario(dados: dict) -> OrderedDict:
     return dados_convertidos
 
 
-def classificar(model: Sequential, vec: CountVectorizer, dados: Dict[str, str]) -> Dict[str, dict]:
+def classificar(model: Sequential, vec: CountVectorizer, dados: Dict[str, str]) -> Dict[str, float]:
     """
     Faz uma predição usando o modelo treinado
 
