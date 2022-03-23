@@ -10,3 +10,4 @@ joblib
 nltk
 agraph-python
 franz
+unidecode
