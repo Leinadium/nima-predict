@@ -125,6 +125,8 @@ def _bag_of_words(sentencas_treino, sentencas_teste, filename: str) -> Tuple:
 def _gerar_rede_neural(x_treino, x_teste, res_treino, res_teste) -> Sequential:
     from keras import layers
     from keras.backend import clear_session
+    from tensorflow import random
+    random.set_seed(123)
 
     clear_session()
 
@@ -132,8 +134,12 @@ def _gerar_rede_neural(x_treino, x_teste, res_treino, res_teste) -> Sequential:
     input_dim = x_treino.shape[1]       # exemplo: (quantidade: 944, bow: 4300)
 
     model = Sequential()
+    model.add(layers.Dense(50, input_dim=input_dim, activation='relu'))
+    model.add(layers.Dense(70, input_dim=input_dim, activation='relu'))
+    # model.add(layers.Dropout(rate=.2, input_dim=input_dim))
     model.add(layers.Dense(20, input_dim=input_dim, activation='relu'))
     model.add(layers.Dense(1, activation='sigmoid'))
+
     model.compile(
         loss='binary_crossentropy',
         optimizer='adam',
@@ -207,3 +213,6 @@ def main():
 
     except Exception as e:
         print("Erro: ", e)
+
+
+main()
