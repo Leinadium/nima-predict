@@ -213,6 +213,3 @@ def main():
 
     except Exception as e:
         print("Erro: ", e)
-
-
-main()
